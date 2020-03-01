@@ -3,13 +3,14 @@ info:
   version: "0.0.1"
   title: Hello World App
 # during dev, should point to your local machine
-#host: localhost:10010
-host: valid-decoder-258800.appspot.com
+host: localhost:10010
+#host: valid-decoder-258800.appspot.com
 x-google-endpoints:
-- name: 'valid-decoder-258800.appspot.com'
+- name: 'localhost:10010'
+#- name: 'valid-decoder-258800.appspot.com'
   allowCors: 'true'
 # basePath prefixes all resource paths 
-basePath: /
+basePath: /api
 # 
 schemes:
   # tip: remove http to make production-grade

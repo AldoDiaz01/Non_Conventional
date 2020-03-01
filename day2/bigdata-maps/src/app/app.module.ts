@@ -1,10 +1,14 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MapComponent } from './map/map.component';
-import { MarkerService } from './_services/marker.service';
+
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+
+import { MarkerService } from './services/marker.service';
+import { PopUpService } from './services/pop-up.service';
+
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -14,12 +18,11 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
-  providers: [
-    MarkerService
-  ],
+  providers: [MarkerService, PopUpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

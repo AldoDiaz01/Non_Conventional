@@ -1,3 +1,34 @@
+<div> 
+        
+  <label class="container"> 
+       <b> Estado </b>
+         
+       <select  name="selectedEstado" id="selectedEstado" [(ngModel)]="selectedEstado" (change)="changeEstado();">
+        <option *ngFor="let edo of arrEstados; let i = index" [value]="edo.idestado">
+          {{edo.estado}}
+        </option>
+      </select>
+     
+       <b> Municipio </b>
+       <select  name="selectedMunicipio" id="selectedMunicipio" [(ngModel)]="selectedMunicipio">
+        <option *ngFor="let mun of arrMunicipios; let i = index" [value]="mun.idmunicipio">
+          {{mun.municipio}}
+        </option>
+      </select>
+
+      
+       <b> Unidad Economica </b>
+       <select  name="selectedUnidad" id="selectedUnidad" [(ngModel)]="selectedUnidad">
+        <option *ngFor="let uni of arrActividades; let i = index" [value]="uni.tipo">
+          {{uni.descripcion}}
+        </option>
+      </select>
+      {{selectedUnidad}}
+      <button (click)="buscarDenues()" type=”button”>Buscar</button>
+
+</label>
+</div>
+
 <div class="map-container">
   <div class="map-frame">
     <div id="map"></div>
