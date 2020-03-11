@@ -27,7 +27,7 @@ export class MarkerService {
               iconSize: [ 25, 41 ],
               iconAnchor: [ 13, 41 ],
               iconUrl: 'assets/'+ actividad  + '.png',
-              shadowUrl: 'assets/marker-shadow.png'
+              //shadowUrl: 'assets/marker-shadow.png'
               })
             }); 
 

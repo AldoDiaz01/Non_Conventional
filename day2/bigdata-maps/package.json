@@ -20,10 +20,13 @@
     "@angular/platform-browser": "^6.1.0",
     "@angular/platform-browser-dynamic": "^6.1.0",
     "@angular/router": "^6.1.0",
+    "bash": "0.0.1",
     "core-js": "^2.5.4",
+    "firebase": "^7.10.0",
+    "leaflet": "1.5.1",
     "rxjs": "~6.2.0",
-    "zone.js": "~0.8.26",
-    "leaflet": "1.5.1"
+    "tools": "0.0.0",
+    "zone.js": "~0.8.26"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.8.0",
