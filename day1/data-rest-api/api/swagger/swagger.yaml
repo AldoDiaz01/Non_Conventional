@@ -4,10 +4,10 @@ info:
   title: Hello World App
 # during dev, should point to your local machine
 host: localhost:10010
-#host: valid-decoder-258800.appspot.com
+#host: https://uv-soft.appspot.com/
 x-google-endpoints:
 - name: 'localhost:10010'
-#- name: 'valid-decoder-258800.appspot.com'
+#- name: 'https://uv-soft.appspot.com/'
   allowCors: 'true'
 # basePath prefixes all resource paths 
 basePath: /api
