@@ -1,6 +1,6 @@
 .map-container {
   position: absolute;
-  top: 4em;
+  top: 2.5em;
   left: 1em;
   right: 1em;
   bottom: 1em;
@@ -15,3 +15,66 @@
 #map {
   height: 100%;
 }
+.btnPersonalizado{
+    text-decoration: none;
+    padding: none;
+    font-weight: 600;
+    font-size: 13px;
+    color: #ffffff;
+    background-color: #1883ba;
+    border-radius: 6px;
+    border: 2px solid #0016b0;
+  }
+
+.btnPersonalizado:hover{
+    color: #1883ba;
+    background-color: #ffffff;
+}
+
+.selectPersonalizadoEstado{
+    display: inline-block;
+	width: 20%;
+	cursor: pointer;
+  	height: 23px;
+  	outline: 0; 
+  	border: 0;
+	border-radius: 0;
+	background: #f0f0f0;
+	color: #7b7b7b;
+	border:2px solid rgba(0,0,0,0.2);
+    border-radius: 12px;
+    position: relative;
+    transition: all 0.25s ease;
+}
+
+  .selectPersonalizadoMunicipio{
+    display: inline-block;
+	width: 20%;
+	cursor: pointer;
+  	height: 23px;
+  	outline: 0; 
+  	border: 0;
+	border-radius: 0;
+	background: #f0f0f0;
+	color: #7b7b7b;
+	border:2px solid rgba(0,0,0,0.2);
+    border-radius: 12px;
+    position: relative;
+    transition: all 0.25s ease;
+}
+
+.selectPersonalizadoUE{
+    display: inline-block;
+	width: 30%;
+	cursor: pointer;
+  	height: 23px;
+  	outline: 0; 
+  	border: 0;
+	border-radius: 0;
+	background: #f0f0f0;
+	color: #7b7b7b;
+	border:2px solid rgba(0,0,0,0.2);
+    border-radius: 12px;
+    position: relative;
+    transition: all 0.25s ease;
+  }
