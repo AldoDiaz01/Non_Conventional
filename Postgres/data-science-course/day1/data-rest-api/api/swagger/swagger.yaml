@@ -1,0 +1,298 @@
+swagger: "2.0"
+info:
+  version: "0.0.1"
+  title: Hello World App
+# during dev, should point to your local machine
+host: localhost:10010
+#host: https://uv-soft.appspot.com/
+x-google-endpoints:
+- name: 'localhost:10010'
+#- name: 'https://uv-soft.appspot.com/'
+  allowCors: 'true'
+# basePath prefixes all resource paths 
+basePath: /api
+# 
+schemes:
+  # tip: remove http to make production-grade
+  - http
+  - https
+# format of bodies a client can send (Content-Type)
+consumes:
+  - application/json
+# format of the responses to the client (Accepts)
+produces:
+  - application/json
+paths:
+  /hello:
+    # binds a127 app logic to a route
+    x-swagger-router-controller: hello_world
+    get:
+      description: Returns 'Hello' to the caller
+      # used as the method name of the controller
+      operationId: hello
+      parameters:
+        - name: name
+          in: query
+          description: The name of the person to whom to say hello
+          required: false
+          type: string
+      responses:
+        "200":
+          description: Success
+          schema:
+            # a pointer to a definition
+            $ref: "#/definitions/HelloWorldResponse"
+        # responses may fall through to errors
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+
+  /entidades:
+    x-swagger-router-controller: data.controller
+    get:
+      description: get the game system list
+      operationId: getEstados
+
+      responses:
+        "200":
+          description: Success
+          schema:
+            $ref: "#/definitions/GetEntidadListResponse"
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+
+  /municipios:
+    x-swagger-router-controller: data.controller
+    get:
+      description: get the game system list
+      operationId: getMunicipios
+      parameters:
+        - name: entidad
+          in: query
+          type: string
+          required: true
+        
+      responses:
+        "200":
+          description: Success
+          schema:
+            $ref: "#/definitions/GetMunicipioListResponse"
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+
+  /bancos:
+    x-swagger-router-controller: data.controller
+    get:
+      description: get the game system list
+      operationId: getBancos
+        
+      responses:
+        "200":
+          description: Success
+          schema:
+            $ref: "#/definitions/GetBancoListResponse"
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+
+  /censobymun:
+    x-swagger-router-controller: data.controller
+    get:
+      description: get the game system list
+      operationId: getCensosByMun
+      parameters:
+        - name: entidad
+          in: query
+          type: string
+          required: true
+        - name: municipio
+          in: query
+          type: string
+          required: true
+      
+      responses:
+        "200":
+          description: Success
+          schema:
+            $ref: "#/definitions/GetCensoListResponse"
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+
+  /censobyedo:
+    x-swagger-router-controller: data.controller
+    get:
+      description: get the game system list
+      operationId: getCensosByEdo
+      parameters:
+        - name: entidad
+          in: query
+          type: string
+          required: true
+      
+      responses:
+        "200":
+          description: Success
+          schema:
+            $ref: "#/definitions/GetCensoListResponse"
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+
+  /denues:
+    x-swagger-router-controller: data.controller
+    get:
+      description: get the game system list
+      operationId: getDenues
+      parameters:
+        - name: entidad
+          in: query
+          type: string
+          required: true
+        - name: municipio
+          in: query
+          type: string
+          required: true
+        - name: tipo
+          in: query
+          type: string
+          required: true
+      
+      responses:
+        "200":
+          description: Success
+          schema:
+            $ref: "#/definitions/GetDenueListResponse"
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/ErrorResponse"
+
+  /swagger:
+    x-swagger-pipe: swagger_raw
+# complex objects have schema definitions
+definitions:
+  HelloWorldResponse:
+    required:
+      - message
+    properties:
+      message:
+        type: string
+  ErrorResponse:
+    required:
+      - message
+    properties:
+      message:
+        type: string
+  GetMunicipioResponse:
+    type: object
+    properties:
+      id:
+        type: string
+        description: identifier
+      idmunicipio:
+        type: string
+        description: Name of the game
+      municipio:
+        type: string
+        description: Developer of the game
+  
+  GetMunicipioListResponse:
+    required:
+      - videogames
+    properties:
+      videogames:
+        type: array
+        items:
+          $ref: "#/definitions/GetMunicipioResponse"
+
+  GetEntidadResponse:
+    type: object
+    properties:
+      id:
+        type: string
+        description: identifier
+      idestado:
+        type: string
+        description: Name of the game
+      estado:
+        type: string
+        description: Developer of the game
+  
+  GetEntidadListResponse:
+    required:
+      - videogames
+    properties:
+      videogames:
+        type: array
+        items:
+          $ref: "#/definitions/GetEntidadResponse"
+
+  GetBancoResponse:
+    type: object
+    properties:
+      id:
+        type: string
+        description: identifier
+      tipo:
+        type: string
+        description: Name of the game
+      descripcion:
+        type: string
+        description: Developer of the game
+  
+  GetBancoListResponse:
+    required:
+      - videogames
+    properties:
+      videogames:
+        type: array
+        items:
+          $ref: "#/definitions/GetBancoResponse"
+          
+
+  GetCensoResponse:
+    type: object
+    properties:
+      idestado:
+        type: string
+        description: Name of the Game System
+      idmunicipio:
+        type: string
+        description: Description of the Game System
+    
+  GetCensoListResponse:
+    required:
+      - gamesystems
+    properties:
+      gamesystems:
+        type: array
+        items:
+          $ref: "#/definitions/GetCensoResponse"
+
+  GetDenueResponse:
+    type: object
+    properties:
+      idestado:
+        type: string
+        description: Name of the Game System
+      idmunicipio:
+        type: string
+        description: Description of the Game System
+    
+  GetDenueListResponse:
+    required:
+      - gamesystems
+    properties:
+      gamesystems:
+        type: array
+        items:
+          $ref: "#/definitions/GetDenueResponse"

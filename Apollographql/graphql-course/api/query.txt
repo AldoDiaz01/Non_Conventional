@@ -1,0 +1,16 @@
+mutation createPet($input: NewPetInput!)
+
+query AllPets($input: PetInput){
+  pets(input: $input){
+    id
+		name
+    type
+    owner{
+      id
+    }
+  }
+}
+
+
+
+{"input": {"type": "DOG"}}

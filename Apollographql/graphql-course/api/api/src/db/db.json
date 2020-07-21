@@ -1,0 +1,73 @@
+{
+  "user": {
+    "id": "jBWMVGJm50l6LGwepDoty",
+    "username": "frontendmaster"
+  },
+  "pet": [
+    {
+      "id": "837295872394827",
+      "name": "Simba",
+      "owner": "jBWMVGJm50l6LGwepDoty",
+      "type": "DOG",
+      "img": "https://www.allthingsdogs.com/wp-content/uploads/2019/02/Brindle-Pitbull-Feature.jpg"
+    },
+    {
+      "id": "XD2Qp6CzJozbm0s13n8SE",
+      "createdAt": 1580855267987,
+      "name": "batman",
+      "type": "DOG",
+      "user": "jBWMVGJm50l6LGwepDoty"
+    },
+    {
+      "id": "cflYwdm0wciAZYw39hxnz",
+      "createdAt": 1580856821958,
+      "name": "miso",
+      "type": "CAT",
+      "user": "jBWMVGJm50l6LGwepDoty"
+    },
+    {
+      "id": "Qjw4XPZ7kDL4eY2tvHHLD",
+      "createdAt": 1580858013314,
+      "name": "luna",
+      "type": "DOG",
+      "user": "jBWMVGJm50l6LGwepDoty"
+    },
+    {
+      "id": "r9WR4QLFqG8ZEAjY5PhPh",
+      "createdAt": 1580858022373,
+      "name": "tesla",
+      "type": "DOG",
+      "user": "jBWMVGJm50l6LGwepDoty"
+    },
+    {
+      "id": "W6V9TvXs0o9ag49yH9rjj",
+      "createdAt": 1580901188268,
+      "name": "gardfield",
+      "type": "CAT",
+      "user": "jBWMVGJm50l6LGwepDoty"
+    },
+    {
+      "id": "Gr24TvTs0o9pg46yt9rpp",
+      "createdAt": 1589075652979,
+      "name": "lucky",
+      "type": "DOG"
+    },
+    {
+      "id": "Br42YvTz1p8oh35ll1ccp",
+      "name": "einstein",
+      "type": "DOG"
+    },
+    {
+      "id": "UxdsQfnz0zg91alANS1yb",
+      "createdAt": 1589664397782,
+      "name": "nigga",
+      "type": "CAT"
+    },
+    {
+      "id": "zvoRWSHyvahFJBzkMiFc9",
+      "createdAt": 1589747628042,
+      "name": "bruh",
+      "type": "DOG"
+    }
+  ]
+}

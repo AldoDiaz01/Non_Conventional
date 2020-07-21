@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/bigdata-maps",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

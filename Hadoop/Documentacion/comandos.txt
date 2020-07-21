@@ -1,0 +1,12 @@
+start-all.cmd
+stop-all.cmd
+
+hdfs dfs -mkdir /<nombre_directorio>
+
+hdfs dfs -/
+hdfs dfs -/<nombre_directorio>
+
+hdfs dfs -copyFromLocal <ruta\archivo_extension> /<nombre_directorio>
+hdfs dfs -cat <nombre_directorio> / <archivo_extension>
+
+hdfs dfs -get <nombre_directorio> / <archivo_extension> <ruta>
